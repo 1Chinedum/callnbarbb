@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auth • Call&Barbb</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="auth">
+  <header class="nav">
+    <div class="nav__brand">Call&Barbb</div>
+    <nav class="nav__links">
+      <a href="/" class="nav__link">Home</a>
+      <a href="/pages/book.html" class="nav__link accent">Book</a>
+    </nav>
+  </header>
+  <main class="auth">
+    <div class="auth__tabs">
+      <button class="tab active" data-tab="login">Login</button>
+      <button class="tab" data-tab="signup">Sign Up</button>
+    </div>
+    <div class="card auth__card">
+      <form id="loginForm" class="form form--hidden">
+        <div class="form__group">
+          <input type="email" id="loginEmail" required placeholder=" ">
+          <label for="loginEmail">Email</label>
+        </div>
+        <div class="form__group">
+          <input type="password" id="loginPassword" required minlength="6" placeholder=" ">
+          <label for="loginPassword">Password</label>
+        </div>
+        <button class="btn btn--primary" type="submit">Login</button>
+      </form>
+      <form id="signupForm" class="form">
+        <div class="form__row">
+          <button class="chip active" data-role="client">Client</button>
+          <button class="chip" data-role="barber">Barber</button>
+        </div>
+        <div class="form__group">
+          <input type="text" id="signupName" required placeholder=" ">
+          <label for="signupName">Full Name</label>
+        </div>
+        <div class="form__group">
+          <input type="email" id="signupEmail" required placeholder=" ">
+          <label for="signupEmail">Email</label>
+        </div>
+        <div class="form__group">
+          <input type="text" id="signupContact" required placeholder=" ">
+          <label for="signupContact">Contact</label>
+        </div>
+        <div class="form__group">
+          <input type="password" id="signupPassword" required minlength="6" placeholder=" ">
+          <label for="signupPassword">Password</label>
+        </div>
+        <div class="form__barber form__row form--hidden">
+          <div class="form__group">
+            <input type="text" id="signupServices" placeholder=" ">
+            <label for="signupServices">Services</label>
+          </div>
+          <div class="form__group">
+            <input type="number" id="signupPrice" placeholder=" ">
+            <label for="signupPrice">Price</label>
+          </div>
+        </div>
+        <button class="btn btn--primary" type="submit">Create account</button>
+      </form>
+    </div>
+    <div class="toast" id="authToast"></div>
+  </main>
+  <script src="/js/app.js" defer></script>
+</body>
+</html>
